@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.dictatorplaybook.com/sitemap.xml
+Sitemap: https://dictatorplaybook.com/sitemap.xml
