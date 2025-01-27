@@ -1,0 +1,257 @@
+:root {
+  --black-000: #000;
+  --red: #c30000;
+  --black-555: #555;
+  --black-333: #333;
+  --grey-ddd: #ddd;
+}
+
+body {
+  color: #333;
+  font-family: Radio Canada, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+h1 {
+  color: var(--black-000);
+  margin-bottom: 10px;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+h2 {
+  color: var(--red);
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 2.25rem;
+}
+
+h3 {
+  color: var(--black-555);
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  padding-left: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+h4 {
+  color: var(--black-333);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-left: 2.5rem;
+}
+
+li {
+  margin-bottom: .25rem;
+}
+
+.wrapper--page {
+  height: 100vh;
+}
+
+.image--hero {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.wrapper--main {
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60rem;
+  max-width: 96%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.wrapper--main.in-hero {
+  z-index: 1;
+  margin-bottom: 8rem;
+  position: absolute;
+  inset: auto 0% 0%;
+}
+
+.wrapper--main.in-footer {
+  z-index: 1;
+  width: auto;
+}
+
+.h1--tagline-hero {
+  z-index: 2;
+  color: #fff;
+  text-shadow: 1px 1px 2px #3f4a49;
+  max-width: 50rem;
+  margin-top: 0;
+  margin-bottom: .5rem;
+}
+
+.wrapper--overlay {
+  z-index: 1;
+  pointer-events: none;
+  background-image: linear-gradient(#000000a8, #000000a8);
+  position: absolute;
+  inset: 0%;
+}
+
+.wrapper--hero {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 6rem;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.h2--tagline-hero {
+  z-index: 2;
+  color: var(--red);
+  text-transform: capitalize;
+  text-shadow: 1px 1px 2px #3f4a49;
+  max-width: 50rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 2.25rem;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.p--main {
+  border-bottom: 1px solid var(--grey-ddd);
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  font-weight: 300;
+  position: relative;
+}
+
+.p--main.border--off {
+  border-bottom-style: none;
+}
+
+.wrapper--footer {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.h1--tagline-footer {
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  text-shadow: 1px 1px 2px #3f4a49;
+  margin-top: 0;
+  margin-bottom: .5rem;
+}
+
+.h2--tagline-footer {
+  z-index: 2;
+  color: var(--grey-ddd);
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 2.25rem;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.p--footer {
+  z-index: 3;
+  color: #dddddd80;
+  text-align: center;
+  font-size: .75rem;
+  font-weight: 300;
+  position: absolute;
+  inset: auto 0% 3%;
+}
+
+@media screen and (max-width: 991px) {
+  .image--hero {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .wrapper--main {
+    max-width: 90%;
+  }
+
+  .h1--tagline-hero, .h2--tagline-hero, .h1--tagline-footer, .h2--tagline-footer {
+    border-radius: 0;
+    font-size: 3rem;
+    inset: auto 0% 0%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .h1--tagline-hero, .h2--tagline-hero, .h1--tagline-footer, .h2--tagline-footer {
+    font-size: 2.25rem;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  h3 {
+    padding-left: 0;
+  }
+
+  ul {
+    padding-left: 1rem;
+  }
+
+  .image--hero {
+    object-position: 55% 50%;
+  }
+
+  .wrapper--main.in-footer {
+    max-width: 90%;
+  }
+
+  .h1--tagline-hero {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    line-height: 1.232;
+  }
+
+  .wrapper--hero {
+    margin-bottom: 2rem;
+  }
+
+  .h2--tagline-hero {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    line-height: 1.232;
+  }
+
+  .wrapper--footer {
+    margin-bottom: 2rem;
+  }
+
+  .h1--tagline-footer, .h2--tagline-footer {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    line-height: 1.232;
+  }
+}
+
+
